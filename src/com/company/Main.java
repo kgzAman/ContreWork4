@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 	FeedCats cats = new FeedCats();
-	cats.MakeCat();
+	cats.addCat();
 
     }
 }

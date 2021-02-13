@@ -9,10 +9,6 @@ public class Cat implements AvaregeLevael{
     private int averageLevel;
     int number;
 
-    public int getNumber() {
-        return number;
-    }
-
     public String getName() {
         return name;
     }
@@ -61,8 +57,15 @@ public class Cat implements AvaregeLevael{
         this.averageLevel = averageLevel;
     }
 
+    public int getNumber() {
+        return number;
+    }
 
-    public Cat(int number,String name, int age, int health, int mood, int satiety) {
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public Cat(int number, String name, int age, int health, int mood, int satiety) {
         this.number=number;
         this.name = name;
         this.age = age;
@@ -72,10 +75,6 @@ public class Cat implements AvaregeLevael{
         this.averageLevel = (this.satiety+this.mood+this.mood)/3;
     }
 
-    public Cat(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
     public static int sortByAverage(Cat one, Cat two){
    return two.getAverageLevel()-one.getAverageLevel();
     }
@@ -85,5 +84,7 @@ public class Cat implements AvaregeLevael{
         int x =(getSatiety()+getMood()+getHealth())/3;
         return x;
     }
+
+
 
 }
