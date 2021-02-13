@@ -1,9 +1,9 @@
 package com.company;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Printer{
-
 
     public static final void printHeader(){
         System.out.println(String.format("%1$.3s+%1$-3.9s+%1$-3.10s+%1$-3.10s+%1$-3.10s+%1$-3.10s+%1$-1s+", "---------------"));
@@ -17,6 +17,13 @@ public class Printer{
     }
     public static final void printFooter(){
         System.out.println(String.format("%1$.3s+%1$-3.9s+%1$-3.10s+%1$-3.10s+%1$-3.10s+%1$-3.10s+%1$-1s+", "---------------"));
+    }
+
+    public static int choose() {
+        System.out.println(" 1 : Покормит \n 2 : Поиграть \n 3 : К ветеринару \n 4 : Завести нового кота ");
+        Scanner scanner = new Scanner(System.in);
+        int ac = Integer.parseInt(scanner.nextLine());
+        return ac;
     }
 
     public static final void print(List<Cat> cats) {

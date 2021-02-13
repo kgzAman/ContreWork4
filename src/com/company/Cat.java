@@ -13,16 +13,8 @@ public class Cat implements AvaregeLevael{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public int getHealth() {
@@ -53,17 +45,10 @@ public class Cat implements AvaregeLevael{
         return averageLevel;
     }
 
-    public void setAverageLevel(int averageLevel) {
-        this.averageLevel = averageLevel;
-    }
-
     public int getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
 
     public Cat(int number, String name, int age, int health, int mood, int satiety) {
         this.number=number;
@@ -85,6 +70,16 @@ public class Cat implements AvaregeLevael{
         return x;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", health=" + health +
+                ", mood=" + mood +
+                ", satiety=" + satiety +
+                ", averageLevel=" + averageLevel +
+                ", number=" + number +
+                '}';
+    }
 }
